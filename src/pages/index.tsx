@@ -1,11 +1,17 @@
 import * as React from "react"
-import { Link } from "gatsby"
+import { PageProps, Link, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const IndexPage = () => (
+type DataProps = {
+  site: {
+    buildTime: string
+  }
+}
+
+const IndexPage: React.FC<PageProps<DataProps>> = ({ data, path }) => (
   <Layout>
     <Seo title="Home" />
     <h1>Hi people</h1>
@@ -20,10 +26,21 @@ const IndexPage = () => (
       style={{ marginBottom: `1.45rem` }}
     />
     <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+      You're currently on the page "{path}" which was built on{" "}
+      {data.site.buildTime}.
+    </p>
+    <p>
+      <Link to="/page-2/">Go to page 2</Link>
     </p>
   </Layout>
 )
 
 export default IndexPage
+
+export const query = graphql`
+  {
+    site {
+      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
+    }
+  }
+`
