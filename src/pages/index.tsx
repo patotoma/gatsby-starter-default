@@ -1,20 +1,20 @@
-import * as React from "react"
-import { PageProps, Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import * as React from "react";
+import { PageProps, Link, graphql } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const IndexPage: React.FC<
   PageProps<{
     site: {
-      buildTime: string
+      buildTime: string;
       siteMetadata?: {
-        title: string
-        description: string
-        author: string
-      }
-    }
+        title: string;
+        description: string;
+        author: string;
+      };
+    };
   }>
 > = ({ data, path }) => (
   <Layout>
@@ -44,9 +44,9 @@ const IndexPage: React.FC<
       <Link to="/page-2/">Go to page 2</Link>
     </p>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   {
@@ -59,4 +59,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

@@ -1,8 +1,8 @@
-import * as React from "react"
-import { PageProps, Link } from "gatsby"
+import * as React from "react";
+import { PageProps, Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const SecondPage: React.FC<PageProps> = ({ path }) => (
   <Layout>
@@ -11,6 +11,6 @@ const SecondPage: React.FC<PageProps> = ({ path }) => (
     <p>Welcome to page 2: "{path}"</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
-)
+);
 
-export default SecondPage
+export default SecondPage;
