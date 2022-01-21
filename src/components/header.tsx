@@ -3,9 +3,7 @@ import { Link } from "gatsby"
 
 const Header: React.FC<{
   siteTitle: string
-}> = ({
-  siteTitle = ''
-}) => (
+}> = ({ siteTitle = "" }) => (
   <header
     style={{
       background: `rebeccapurple`,

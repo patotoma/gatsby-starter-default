@@ -8,10 +8,10 @@ import Seo from "../components/seo"
 const IndexPage: React.FC<
   PageProps<{
     site: {
-      buildTime: string,
+      buildTime: string
       siteMetadata?: {
-        title: string,
-        description: string,
+        title: string
+        description: string
         author: string
       }
     }
