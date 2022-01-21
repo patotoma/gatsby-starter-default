@@ -5,13 +5,18 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-type DataProps = {
-  site: {
-    buildTime: string
-  }
-}
-
-const IndexPage: React.FC<PageProps<DataProps>> = ({ data, path }) => (
+const IndexPage: React.FC<
+  PageProps<{
+    site: {
+      buildTime: string,
+      siteMetadata?: {
+        title: string,
+        description: string,
+        author: string
+      }
+    }
+  }>
+> = ({ data, path }) => (
   <Layout>
     <Seo title="Home" />
     <h1>Hi people</h1>
@@ -30,6 +35,12 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       {data.site.buildTime}.
     </p>
     <p>
+      siteMetadata: <br />
+      title: {data.site.siteMetadata?.title} <br />
+      description: {data.site.siteMetadata?.description} <br />
+      author: {data.site.siteMetadata?.author}
+    </p>
+    <p>
       <Link to="/page-2/">Go to page 2</Link>
     </p>
   </Layout>
@@ -41,6 +52,11 @@ export const query = graphql`
   {
     site {
       buildTime(formatString: "YYYY-MM-DD hh:mm a z")
+      siteMetadata {
+        title
+        description
+        author
+      }
     }
   }
 `
