@@ -1,0 +1,48 @@
+@import "settings";
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $bg--light;
+  color: $text--light;
+  animation: fadeInAnimation ease-out 1.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+code {
+  font-family: $font-family--code;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+button,
+pre {
+  font-family: $font-family;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: $bg--dark;
+    color: $text--dark;
+  }
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
