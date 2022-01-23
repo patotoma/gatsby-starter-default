@@ -1,6 +1,11 @@
 @import "settings";
 
+html {
+  height: 100%;
+}
+
 body {
+  min-height: 100%;
   margin: 0;
   font-family: $font-family;
   -webkit-font-smoothing: antialiased;
