@@ -1,18 +1,13 @@
 @import "settings";
 
-html {
-  height: 100%;
-}
-
 body {
-  min-height: 100%;
   margin: 0;
   font-family: $font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: $bg--light;
   color: $text--light;
-  animation: fadeInAnimation ease-out 1.5s;
+  animation: fadeInAnimation ease-in-out 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -22,8 +17,12 @@ code {
 }
 
 a {
+  color: $highlight-color;
   cursor: pointer;
-  text-decoration: none;
+}
+
+hr {
+  border-color: $border--light;
 }
 
 b,
@@ -40,6 +39,9 @@ pre {
   body {
     background: $bg--dark;
     color: $text--dark;
+  }
+  hr {
+    border-color: $border--dark;
   }
 }
 
