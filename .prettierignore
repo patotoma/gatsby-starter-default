@@ -1,5 +1,7 @@
 .cache
+.husky
+.vscode
+public
 package.json
 package-lock.json
-public
 tsconfig.json
