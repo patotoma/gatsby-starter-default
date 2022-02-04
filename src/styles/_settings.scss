@@ -55,7 +55,7 @@ $screen-sm-max: ($screen-md-min - 1);
 $screen-md-max: ($screen-lg-min - 1);
 
 // colors
-$brand--primary--light: #b45139;
+$brand--primary--light: rebeccapurple;
 $brand--primary--dark: lighten($brand--primary--light, 10%);
 $brand--secondary--light: $brand--primary--light;
 $brand--secondary--dark: $brand--primary--dark;

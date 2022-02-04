@@ -6,7 +6,6 @@ const Header: React.FC<{
 }> = ({ siteTitle = "" }) => (
   <header
     style={{
-      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
